@@ -53,6 +53,13 @@ app.get("/name", function (req, res) {
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
+app.post("/name", function (req, res) {
+    const primeiroNome = req.body.first;
+    const segundoNome = req.body.last;
+
+    res.json({ "name": primeiroNome + " " + segundoNome });
+});
+
 
 
 
