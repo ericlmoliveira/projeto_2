@@ -8,10 +8,12 @@ app.get("/", function (req, res) {
     
     const caminho_absoluto = __dirname + "/views/index.html";
     res.sendFile(caminho_absoluto);
-    res.json({message: "Hello World"});
-
-
 });  
+
+app.get("/json", function (req, res) {
+    res.json({"message": "Hello json"});
+}
+
 
 
 
