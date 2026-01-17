@@ -41,6 +41,12 @@ app.get("/:world/echo", function (req, res) {
 });
 
 
+app.get("/name", function (req, res) {
+    const primeiroNome = req.query.first;
+    const segundoNome = req.query.last;
+
+    res.json({ "name": primeiroNome + " " + segundoNome });
+};
 
 
 
