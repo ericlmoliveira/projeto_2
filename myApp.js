@@ -1,5 +1,6 @@
 let express = require('express');
 let app = express();
+const bodyParser = require('body-parser');
 
 
 app.use(function middleware(req, res, next) {
@@ -49,7 +50,7 @@ app.get("/name", function (req, res) {
 });
 
 
-
+app.use(bodyParser.urlencoded({ extended: false }));
 
 
 
