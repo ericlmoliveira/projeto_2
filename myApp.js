@@ -4,7 +4,11 @@ let app = express();
 console.log("Hello World");
 
 app.get("/", function (req, res) {
-    res.send("Hello Express");
+    
+    const caminho_absoluto = __dirname + "/views/index.html";
+    res.sendFile(caminho_absoluto);
+
+
 });
 
 
