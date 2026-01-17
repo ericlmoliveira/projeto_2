@@ -46,7 +46,7 @@ app.get("/name", function (req, res) {
     const segundoNome = req.query.last;
 
     res.json({ "name": primeiroNome + " " + segundoNome });
-};
+});
 
 
 
