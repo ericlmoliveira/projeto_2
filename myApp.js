@@ -1,6 +1,8 @@
 let express = require('express');
 let app = express();
 const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 app.use(function middleware(req, res, next) {
@@ -36,8 +38,8 @@ app.get("/now", function (req, res, next) {
 });
 
 
-app.get("/:world/echo", function (req, res) {
-    const parametro = req.params.world;
+app.get("/:word/echo", function (req, res) {
+    const parametro = req.params.word;
     res.json({ "echo": parametro });
 });
 
@@ -48,9 +50,6 @@ app.get("/name", function (req, res) {
 
     res.json({ "name": primeiroNome + " " + segundoNome });
 });
-
-
-app.use(bodyParser.urlencoded({ extended: false }));
 
 
 app.post("/name", function (req, res) {
