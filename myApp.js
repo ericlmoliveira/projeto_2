@@ -32,8 +32,13 @@ app.get("/now", function (req, res, next) {
     next(); },
     function (req, res) {
         res.json({ time: req.time });
+});
 
-    });
+
+app.get("/:world/echo", function (req, res) {
+    const parametro = req.params.world;
+    res.json({ "echo": parametro });
+});
 
 
 
