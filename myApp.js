@@ -52,11 +52,9 @@ app.get("/name", function (req, res) {
 });
 
 
-app.post("/name", function (req, res) {
-    const primeiroNome = req.body.first;
-    const segundoNome = req.body.last;
-
-    res.json({ "name": primeiroNome + " " + segundoNome });
+app.post("/name", function(req, res) {
+  var nomeCompleto = req.body.first + " " + req.body.last;
+  res.json({ name: nomeCompleto });
 });
 
 
