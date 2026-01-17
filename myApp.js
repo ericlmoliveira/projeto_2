@@ -44,14 +44,6 @@ app.get("/:word/echo", function (req, res) {
 });
 
 
-app.get("/name", function (req, res) {
-    const primeiroNome = req.query.first;
-    const segundoNome = req.query.last;
-
-    res.json({ "name": primeiroNome + " " + segundoNome });
-});
-
-
 app.post("/name", function(req, res) {
   var nomeCompleto = req.body.first + " " + req.body.last;
   res.json({ name: nomeCompleto });
