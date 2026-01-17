@@ -17,7 +17,7 @@ app.get("/json", function (req, res) {
         resposta = resposta.toUpperCase();
     }   
     res.json({ "message": resposta });
-}
+});
 
 
 
